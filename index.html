@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Aim Trainer</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Welcome to the Reflex Trainer</h1>
+      <button class="btn" id="start">Play</button>
+    </div>
+    <div class="screen">
+      <h1>Select Time Limit</h1>
+      <ul class="list" id="time-list">
+        <li>
+          <button class="btn back-btn" id="back">Back</button>
+        </li>
+        <li>
+          <button class="btn time-btn" data-time="30">30 sec</button>
+        </li>
+        <li>
+          <button class="btn time-btn" data-time="60">1 min</button>
+        </li>
+        <li>
+          <button class="btn time-btn" data-time="90">1.5 min</button>
+        </li>
+        <li>
+          <button class="btn time-btn" data-time="120">2 min</button>
+        </li>
+        <li>
+          <button class="btn time-btn" data-unlimited="0">Unlimited</button>
+        </li>
+      </ul>
+    </div>
+    <div class="screen">
+      <h1>Select Difficulty</h1>
+      <ul class="list" id="difficulty-list">
+        <li>
+          <button class="btn back-btn2" id="back2">Back</button>
+        </li>
+        <li>
+          <button class="btn difficulty-btn" data-difficulty="1">Easy</button>
+        </li>
+        <li>
+          <button class="btn difficulty-btn" data-difficulty="2">Medium</button>
+        </li>
+        <li>
+          <button class="btn difficulty-btn" data-difficulty="3">Hard</button>
+        </li>
+        <li>
+          <button class="btn difficulty-btn" data-difficulty="4">Impossible</button>
+        </li>
+      </ul>
+    </div>
+    <div class="screen" id="game-screen" >
+
+       <div class="stats">
+        <div class="info">
+          <p>Time:<span id="time">00:00:00</span></p>
+          <p>Hits:<span id="hits">0</span></p>
+          <p>Accuracy:<span id="accuracy">0%</span></p>
+        </div>
+      </div>
+      <div class="board" id="board"></div>
+      <div class="options">
+        <button class="btn restart" >Exit</button>
+        <ul class="buttons" id="thisthing">
+        
+        <button class="btn begin"> Start</button></ul>
+        <button class="btn" id="fullscreen">Full Screen</button>
+</div>
+        <button class="btn" id="minimize">Minimize</button>
+      
+     </div>
+    </div>
+
+    <div class="screen">
+      <h1>Game Over</h1>
+      <div class="results">
+        <p>Hits:<span id="hits-over">0</span></p>
+        <p>Accuracy:<span id="accuracy-over">0%</span></p>
+      </div>
+      <button class="btn restart" >Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

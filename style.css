@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+:root {
+  --primary-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #dfd7cc;
+  font-family: "Nunito";
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  line-height: 1.4;
+  font-size: 4rem;
+}
+
+.btn {
+  background-color: transparent;
+  border: 3px solid #c0c0c0;
+  border-radius: 3px;
+  color: #faebd7;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+  background-color: #0c0c0c;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  margin: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.stats div {
+  display: flex;
+  align-items: center;
+}
+.stats div p {
+  margin: 0 0.5rem;
+}
+.stats div span {
+  margin-left: 10px;
+  color: var(--primary-color);
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  flex: 1;
+  background: #0c0c0c;
+  overflow: hidden;
+}
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+#minimize {
+  display: none;
+}
+.circle {
+  background-color: var(--primary-color);
+  position: absolute;
+  animation: circle 2s linear forwards;
+  border-radius: 50%;
+}
+
+@keyframes circle {
+  100% {
+    transform: scale(0);
+  }
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.results p {
+  font-size: 2rem;
+}
+
+.results p span {
+  color: var(--primary-color);
+  margin-left: 10px;
+}
+
+/* media quiries */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
+  .stats {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .stats div {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .lives {
+    margin-bottom: 10px;
+  }
+}
